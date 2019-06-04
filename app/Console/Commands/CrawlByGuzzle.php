@@ -3,23 +3,23 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use App\CurlCrawler;
+use App\GuzzleCrawler;
 
-class Curl extends Command
+class CrawlByGuzzle extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'crawl:curl';
+    protected $signature = 'crawl:guzzle';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Crawl by cURL';
+    protected $description = 'Crawl by Guzzle';
 
     /**
      * Create a new command instance.
@@ -38,7 +38,7 @@ class Curl extends Command
      */
     public function handle()
     {
-        $html = CurlCrawler::crawl(CommandUtil::URL);
-        CurlCrawler::save("curl.html",$html);
+        $html = GuzzleCrawler::crawl(CommandUtil::URL);
+        GuzzleCrawler::save("gz.html",$html);
     }
 }

@@ -4,8 +4,8 @@ namespace App;
 
 class BaseCrawler
 {
-    const URL = "https://www.w3schools.com";
     const PATH = "storage/app/";
+    const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36';
 
     public static function save($file_name, $file_content)
     {

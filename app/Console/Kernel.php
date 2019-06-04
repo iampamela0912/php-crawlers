@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\Curl::class,
+        Commands\CrawlByGuzzle::class,
     ];
 
     /**
